@@ -1,0 +1,12 @@
+Falco answers ONE question:
+“Is this container behaving the way it SHOULD?”
+
+Not:
+Is this image safe?
+Is this YAML correct?
+
+But:
+Why is this container opening a shell?
+Why is it touching /proc?
+Why is it downloading binaries?
+Why is it talking to random IPs?
