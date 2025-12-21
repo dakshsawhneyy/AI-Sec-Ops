@@ -1,0 +1,6 @@
+# Falco K8S Install Commands
+helm repo add falcosecurity https://falcosecurity.github.io/charts
+helm repo update
+
+helm install --replace falco --set tty=true falcosecurity/falco
+
