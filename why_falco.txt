@@ -10,3 +10,15 @@ Why is this container opening a shell?
 Why is it touching /proc?
 Why is it downloading binaries?
 Why is it talking to random IPs?
+
+
+###########################
+FALCO COMMANDS
+###########################
+
+kubectl exec -it pod/svc-a -- sh 
+kubectl exec -it pod/svc-a -- cat /etc/passwd
+
+
+
+6:52:27.492341561: Notice A shell was spawned in a container with an attached terminal | evt_type=execve user=root user_uid=0 user_loginuid=-1 process=sh proc_exepath=/bin/busybox parent=containerd-shim command=sh terminal=34816 exe_flags=EXE_WRITABLE|EXE_LOWER_LAYER container_id=74019588ca76 container_name=svc-a container_image_repository=docker.io/dakshsawhneyy/demo-service-a container_image_tag=v k8s_pod_name=svc-a-5565d59b56-cjk5c k8s_ns_name=default
