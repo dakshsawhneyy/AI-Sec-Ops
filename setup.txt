@@ -2,5 +2,7 @@
 helm repo add falcosecurity https://falcosecurity.github.io/charts
 helm repo update
 
-helm install --replace falco --set tty=true falcosecurity/falco
+helm install --replace falco --set tty=true falcosecurity/falco \
+    --set falcosidekick.enabled=true \
+    --set falcosidekick.config.aws.region="ap-south-1" \
 
