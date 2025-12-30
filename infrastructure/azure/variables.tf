@@ -6,6 +6,6 @@ variable "location" {
   default = "Central India"
 }
 
-variable "region" {
+variable "aws_region" {
   default = "ap-south-1"
 }

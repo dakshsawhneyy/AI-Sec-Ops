@@ -2,7 +2,7 @@
 data "terraform_remote_state" "aws" {
   backend = "s3"
   config = {
-    bucket = "aiops-platform-sf"
+    bucket = "ai-sec-ops-sf"
     key    = "aws/terraform.tfstate"
     region = "ap-south-1"
   }
